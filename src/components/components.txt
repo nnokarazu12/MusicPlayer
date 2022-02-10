@@ -1,0 +1,8 @@
+Audio component
+-Display component
+-Play, pause, loop, volume
+-Animated visual
+
+Playlist component
+-List of current Playlist
+- 

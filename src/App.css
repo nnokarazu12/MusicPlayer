@@ -1,38 +1,165 @@
-.App {
+:root {
+  --main-theme: #D32F2F;
+  --main-theme-dark: #AD1457;
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#banner {
+  float: left;
+  width: 400px;
+  height: 100%;
+  /*background: linear-gradient(to bottom, var(--main-theme), var(--main-theme-dark));*/
+  background-color: white;
+  font-size: 32px;
+  color: var(--main-theme);
+}
+#title {
+  width: 200px;
+  margin: auto;
+  position: relative;
+  top: 25px;
+}
+#description {
+  position: relative;
+  top: 50px;
+  left: 100px;
+  font-size: 18px;
+}
+#view-container {
+  width: 100%;
+  height: 100vh;
+}
+#audio-container {
+  float: left;
+  width: calc(100% - 400px);
+  height: 400px;
+  background: linear-gradient(to right, var(--main-theme), var(--main-theme-dark));
+  color: white;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#now-playing {
+  font-size: 24px;
+  position: relative;
+  top: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#song-title {
+  position: relative;
+  top: 75px;
+  font-size: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#controls-container {
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+  top: 150px;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  height: 50px;
+  padding: 10px 0px 5px 50px;
+  text-align: left;
 }
-
-.App-link {
-  color: #61dafb;
+#controls-container div {
+  display: inline-block;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#seek-bar {
+  appearance: none;
+  width: 600px;
+  position: relative;
+  top: -14px;
+  left: 25px;
+  border-radius: 50px;
+}
+#seek-bar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: white;
+  border: none;
+  border-radius: 50px;
+}
+#seek-bar:focus {
+  outline: none;
+}
+#seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  background: var(--main-theme);
+  position: relative;
+  top: -7px;
+  cursor: pointer;
+}
+#time {
+  width: 150px;
+  text-align: center;
+  position: relative;
+  top: -10px;
+  left: 25px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+#playlist-container {
+  width: calc(100% - 400px);
+  height: calc(100% - 400px);
+  background-color: #eee;
+  float: left;
+  font-size: 22px;
+}
+#playlist-head {
+  width: 100%;
+  height: 50px;
+  color: black;
+  background: white;
+}
+#playlist-title {
+  width: 200px;
+  position: relative;
+  top: 10px;
+  left: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#playlist-body {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 25px;
+}
+.playlist-item {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  padding: 0 25px 0 25px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+.playlist-song-name{
+  position: relative;
+  top: 10px;
+  width: auto;
+  height: 50px;
+  float: left;
+}
+.playlist-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 15px;
+  float: right;
+  cursor: pointer;
+}
+.playlist-icon img {
+  width: 100%;
+  height: 100%;
 }
