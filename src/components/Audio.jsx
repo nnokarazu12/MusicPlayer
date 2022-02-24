@@ -76,6 +76,7 @@ function Audio() {
             <div style={{height: "200px"}}>
                 <p id="now-playing">Now Playing</p>
                 <p id="song-title"></p>
+                <p id="artist"></p>
             </div>
             <div id="controls-container">
                 <div className="icon" id="play-pause" onClick={togglePlay} style={{visibility: "hidden"}}>
@@ -86,7 +87,7 @@ function Audio() {
                 <div className="icon">
                     <img src={mute} alt="mute icon"/>
                 </div>
-                <input id="volume" type="range" defaultValue="100" min="0" max="100" step="1" onChange={updateVolume}/>
+                <input style={{visibility: "hidden "}} id="volume" type="range" defaultValue="100" min="0" max="100" step="1" onChange={updateVolume}/>
             </div>
         </div>
      );
